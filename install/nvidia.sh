@@ -7,4 +7,8 @@ packages=(
 	lib32-nvidia-libgl
 )
 
-sudo pacman -S ${packages[@]}
+if [[ $CURRENT_OS == 'Linux' ]]; then
+	sudo pacman -S ${packages[@]}
+else
+	printf "Aborting, Archlinux specific"
+fi

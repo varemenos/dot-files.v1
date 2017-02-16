@@ -121,4 +121,8 @@ apps=(
 	libwnck3
 )
 
-packer -S ${apps[@]}
+if [[ $CURRENT_OS == 'Linux' ]]; then
+	packer -S ${apps[@]}
+else
+	printf "Aborting, Archlinux specific"
+fi

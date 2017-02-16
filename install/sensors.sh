@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-# install system sensors detectors
-packer -S lm_sensors hddtemp
+if [[ $CURRENT_OS == 'Linux' ]]; then
+	# install system sensors detectors
+	packer -S lm_sensors hddtemp
 
-# initialize/configure sensor detectors
-sudo sensors-detect
+	# initialize/configure sensor detectors
+	sudo sensors-detect
+else
+	printf "Aborting, Archlinux specific"
+fi
