@@ -1,0 +1,71 @@
+[user]
+	name = Adonis K.
+	email = aklp08@gmail.com
+
+[github]
+	user = varemenos
+
+[color]
+	ui = always
+	diff= always
+	status= always
+	branch= always
+
+[core]
+	editor = nano
+	fileMode = false # ignore file rights changes
+	autocrlf = false # disable autocrlf mode
+
+[merge]
+	summary = true # add commits summary when merging
+	tool = nano
+
+[log]
+	date=short
+
+[push]
+	# 'git push' will push the current branch to its tracking branch
+	# the default is to push all branches
+	default = tracking
+
+[alias]
+	a = add
+	ap = add --patch
+	b = branch
+	bi = bisect
+	c = commit
+	ca = commit --amend
+	cl = clone
+	co = checkout
+	d = diff
+	dc = diff --cached
+	ds = diff --staged
+	dw = diff --word-diff
+	f = fetch
+	g = grep
+	i = init
+	l = log
+	lp = log --oneline
+	lv = log --oneline --graph
+	m = merge
+	mc = merge --continue
+	ma = merge --abort
+	ms = merge --skip
+	mv = mv
+	p = push
+	pl = pull
+	r = reset
+	rb = rebase
+	rbc = rebase --continue
+	rba = rebase --abort
+	rbs = rebase --skip
+	rm = rm
+	s = status
+	st = stash
+	sh = show
+	t = tag
+	w = whatchanged
+	ws = status -s
+
+[help]
+	autocorrect = 1
