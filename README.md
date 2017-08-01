@@ -6,7 +6,7 @@ my dotfiles, enjoy
 
 ## Installation
 
-coming soon ~
+Interactive installation via the `installer.sh`
 
 ## License
 
