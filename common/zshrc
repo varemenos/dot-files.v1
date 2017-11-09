@@ -1,8 +1,3 @@
-# install zplug if missing
-if ! type zplug > /dev/null; then
-    curl -sL zplug.sh/installer | zsh
-fi
-
 # load zplug
 source ~/.zplug/init.zsh
 
