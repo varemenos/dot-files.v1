@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 function dir() {
-	for d in ./install/*; do
-		echo '*' $d | sed 's/.\/install\///g' | sed 's/.sh//g'
+	for d in ./installer/*; do
+		echo '*' $d | sed 's/.\/installer\///g' | sed 's/.sh//g'
 	done
 }
 
@@ -12,7 +12,7 @@ function choose() {
 	dir;
 	echo -e '\nType your choice: \n'
 	read choice
-	if ! command "./install/${choice}.sh" > /dev/null; then
+	if ! command "./installer/${choice}.sh" > /dev/null; then
 		echo "command not found"
 	fi
 }
