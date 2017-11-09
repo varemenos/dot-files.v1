@@ -17,5 +17,5 @@ pkg.install() {
 	export PATH=~/.ellipsis/bin:$PATH
 
 	# install zplug if it's not already installed
-[[ -s $HOME/.zplug/autoload/zplug ]] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+	[[ -s $HOME/.zplug/autoload/zplug ]] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 }
