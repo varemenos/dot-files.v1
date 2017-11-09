@@ -18,7 +18,7 @@
 
 [merge]
 	summary = true # add commits summary when merging
-	tool = nano
+	tool = atom --wait
 
 [log]
 	date=short
