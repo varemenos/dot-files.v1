@@ -9,7 +9,7 @@ my dotfiles, enjoy
 ## Installation
 
 ```
-curl -sL ellipsis.sh | sh # install ellipsis.sh
+curl -sL ellipsis.sh | sh
 ellipsis install varemenos/files
 ```
 
