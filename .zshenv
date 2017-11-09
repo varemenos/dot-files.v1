@@ -38,6 +38,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # Extras, like shims and autocompletion
 eval "$(rbenv init -)"
 
+# load ellipsis.sh
+export PATH=~/.ellipsis/bin:$PATH
 
 # Set CHROME_BIN for karma
 if [[ $CURRENT_OS == 'Linux' ]]; then
