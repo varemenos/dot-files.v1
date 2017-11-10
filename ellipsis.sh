@@ -14,7 +14,7 @@ pkg.link() {
 }
 
 pkg.install() {
-	export PATH=~/.ellipsis/bin:$PATH
+	export PATH="~/.ellipsis/bin:$PATH"
 
 	# install zplug if it's not already installed
 	if [ ! -e "$HOME/.zplug/autoload/zplug" ]; then
