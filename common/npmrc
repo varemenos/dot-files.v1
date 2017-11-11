@@ -1,8 +1,0 @@
-email = aklp08@gmail.com
-python /usr/bin/python2
-tmp = /tmp
-init.author.name = Adonis K.
-init.author.email = aklp08@gmail.com
-init.author.url = http://adonisk.com/
-init-license = "MIT"
-init-version = "0.0.1"
