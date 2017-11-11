@@ -11,9 +11,6 @@ else
 	printf "nvm $(nvm current) is already installed."
 fi
 
-nvm install v0.10.26
-nvm install v0.10.34
-nvm install v0.12
 nvm install lts
 nvm install stable
 
