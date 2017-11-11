@@ -12,6 +12,8 @@ my dotfiles, enjoy
 curl -sL ellipsis.sh | PACKAGES='varemenos/files' sh
 ```
 
+**Don't forget to load a new zsh session after installing the dotfiles!**
+
 ## License
 
 the MIT license
