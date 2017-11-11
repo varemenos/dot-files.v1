@@ -2,9 +2,9 @@
 
 packages=(
 	nvidia
-	nvidia-libgl
+	nvidia-utils
+	lib32-nvidia-utils
 	opencl-nvidia
-	lib32-nvidia-libgl
 )
 
 if [[ $CURRENT_OS == 'Linux' ]]; then
