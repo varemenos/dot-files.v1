@@ -8,7 +8,13 @@ if ! type "nvm" > /dev/null; then
 	git checkout `git describe --abbrev=0 --tags`
 	. ~/.nvm/nvm.sh
 else
-	printf "nvm $(nvm current) is already installed."
+	printf "nvm $(nvm current) is already installed, upgrading."
+	(
+	cd "$NVM_DIR"
+	git fetch origin
+	git checkout .
+	git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
+) && . "$NVM_DIR/nvm.sh"
 fi
 
 nvm install lts
