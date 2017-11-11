@@ -14,10 +14,13 @@ pkg.link() {
 }
 
 pkg.install() {
-	export PATH="~/.ellipsis/bin:$PATH"
+  # source ellipsis binary if it's not loaded yet
+  if ! type "ellipsis" > /dev/null; then
+		. ~/.ellipsis/bin/ellipsis
+	fi
 
 	# install zplug if it's not already installed
-	if [ ! -e "$HOME/.zplug/autoload/zplug" ]; then
+	if ! type "zplug" > /dev/null; then
 		curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 	fi
 }
