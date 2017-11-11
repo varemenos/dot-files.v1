@@ -17,10 +17,10 @@ else
 ) && . "$NVM_DIR/nvm.sh"
 fi
 
-nvm install lts
+nvm install 'lts/*'
 nvm install stable
 
-nvm alias current lts
+nvm alias current 'lts/*'
 nvm alias default current
 
 nvm use default
