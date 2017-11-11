@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 packages=(
-	babel
+	babel-cli
 	autoprefixer
 	bower
 	browser-sync
@@ -17,9 +17,7 @@ packages=(
 	grunt-init
 	gulp
 	jasmine
-	jscs
-	jshint
-	jslint
+	eslint
 	jsonlint
 	jsxhint
 	karma-cli
@@ -30,11 +28,8 @@ packages=(
 	npm-check-updates
 	parker
 	pm2
-	requirejs
-	react-tools
 	sassdoc
 	svgo
-	tern
 	webpack
 )
 
