@@ -9,10 +9,8 @@ my dotfiles, enjoy
 ## Installation
 
 ```
-curl -sL ellipsis.sh | PACKAGES='varemenos/files' sh
+curl -sL ellipsis.sh | PACKAGES='varemenos/files' sh && exec $SHELL
 ```
-
-**Don't forget to load a new shell session (`exec $SHELL`) after installing the dotfiles!**
 
 ## License
 
