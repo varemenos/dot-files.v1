@@ -2,8 +2,10 @@
 UNAME=`uname`
 if [[ $UNAME == 'Darwin' ]]; then
 	CURRENT_OS='OS X'
-else
+elif [[ $UNAME == 'Linux' ]]; then
 	CURRENT_OS='Linux'
+else
+	CURRENT_OS='Unknown'
 fi
 
 # turn off useless bloating globals usually set by distros
