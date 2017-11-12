@@ -12,7 +12,7 @@ my dotfiles, enjoy
 curl -sL ellipsis.sh | PACKAGES='varemenos/files' sh
 ```
 
-**Don't forget to load a new zsh session after installing the dotfiles!**
+**Don't forget to load a new shell session (`exec $SHELL`) after installing the dotfiles!**
 
 ## License
 
