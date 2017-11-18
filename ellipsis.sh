@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 pkg.link() {
-	fs.link_files common
+	fs.link_rfiles common
 
 	case $(os.platform) in
 		osx)
-			fs.link_files platform/osx
+			fs.link_rfiles platform/osx
 			;;
 		linux)
-			fs.link_files platform/linux
+			fs.link_rfiles platform/linux
 			;;
 	esac
 }
