@@ -6,10 +6,10 @@
 	user = varemenos
 
 [color]
-	ui = always
-	diff= always
-	status= always
-	branch= always
+	#ui = always
+	#diff= always
+	#status= always
+	#branch= always
 
 [core]
 	editor = nano
