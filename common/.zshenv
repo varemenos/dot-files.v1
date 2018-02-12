@@ -33,8 +33,8 @@ fi
 # Tell NVM to symlink the currently selected node version
 export NVM_SYMLINK_CURRENT=true
 
-# Extend PATH
-export PATH=$PATH:/usr/sbin:/sbin:/bin
+# Homebrew fixes
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # load RBENV
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -48,3 +48,10 @@ export PATH=~/.ellipsis/bin:$PATH
 if [[ $CURRENT_OS == 'Linux' ]]; then
 	export CHROME_BIN=google-chrome-stable
 fi
+
+# Set GOROOT-based install location
+PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# Set GOPATH
+	export GOPATH=~/.go
+
