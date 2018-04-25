@@ -199,6 +199,7 @@ else
 		moreutils
 		mpfr
 		mysql
+		nano
 		netpbm
 		nettle
 		nmap
