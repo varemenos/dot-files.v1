@@ -12,6 +12,8 @@ my dotfiles, enjoy
 curl -sL ellipsis.sh | PACKAGES='varemenos/files' sh && exec $SHELL
 ```
 
+Additional/optional packages: `varemenos/node`, `varemenos/ruby`, `varemenos/apps`.
+
 ## License
 
 the MIT license
