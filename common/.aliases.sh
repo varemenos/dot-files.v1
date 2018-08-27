@@ -17,6 +17,7 @@ alias gedit='subl'
 alias g='git'
 alias h="history"
 alias j="jobs"
+alias cat='bat'
 
 # Actions
 alias build-source='./configure && make && sudo make install'
