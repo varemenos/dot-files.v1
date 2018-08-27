@@ -3,6 +3,7 @@
 if [[ $CURRENT_OS == 'Linux' ]]; then
 	apps=(
 		# cli
+		bat
 		zsh
 		wget
 		curl
