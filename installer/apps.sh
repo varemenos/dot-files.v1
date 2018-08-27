@@ -130,6 +130,7 @@ else
 		aircrack-ng
 		autoconf
 		autoenv
+		bat
 		binutils
 		binwalk
 		cifer
