@@ -14,6 +14,8 @@ zplug "plugins/gem", from:oh-my-zsh, defer:3
 zplug "plugins/npm", from:oh-my-zsh, defer:3
 zplug "plugins/yarn", from:oh-my-zsh, defer:3
 zplug "plugins/rbenv", from:oh-my-zsh, defer:3
+zplug "plugins/fzf", from:oh-my-zsh, defer:3
+zplug "plugins/z", from:oh-my-zsh, defer:3
 zplug "themes/lukerandall", from:oh-my-zsh
 
 zplug "chrissicool/zsh-256color" # ZSH plugin enhances the terminal environment with 256 colors.
