@@ -72,8 +72,8 @@
 [help]
 	autocorrect = 1
 
-# [diff]
-# 	colorMoved = zebra
+[diff]
+	colorMoved = zebra
 
 # [color]
 # 	ui = true
