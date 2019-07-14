@@ -19,6 +19,7 @@ zplug "plugins/z", from:oh-my-zsh, defer:3
 zplug "themes/lukerandall", from:oh-my-zsh
 
 zplug "chrissicool/zsh-256color" # ZSH plugin enhances the terminal environment with 256 colors.
+zplug "sharkdp/bat" # a better cat
 zplug "zsh-users/zsh-syntax-highlighting" # Syntax highlighting bundle.
 zplug "zsh-users/zsh-history-substring-search" # Fish shell's history search functionality bundle.
 zplug "zsh-users/zsh-completions" # Additional completion definitions for Zsh.
