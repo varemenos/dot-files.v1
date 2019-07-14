@@ -53,5 +53,7 @@ fi
 PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # Set GOPATH
-	export GOPATH=~/.go
+export GOPATH=~/.go
 
+# add support for ctrl+o to open selected file in VS Code
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
