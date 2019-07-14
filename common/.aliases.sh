@@ -20,6 +20,7 @@ alias j="jobs"
 alias cat='bat'
 
 # Actions
+alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias build-source='./configure && make && sudo make install'
 alias untar='tar -zxvf'
 alias untarxz='tar -xJf'
