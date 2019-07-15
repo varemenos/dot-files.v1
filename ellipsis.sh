@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 pkg.link() {
-	 stow common -t ~
-
+	stow common -t ~
+	
+	cd platform
 	case $(os.platform) in
 		osx)
 			stow platform/osx -t ~
@@ -11,6 +12,7 @@ pkg.link() {
 			stow platform/linux -t ~
 			;;
 	esac
+	popd
 }
 
 pkg.install() {
