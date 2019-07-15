@@ -19,6 +19,6 @@ pkg.install() {
 		curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 	fi
 	
-	// fix an oh-my-zsh loading issue with file permission issues
+	# fix an oh-my-zsh loading issue with file permission issues
 	compaudit | xargs chmod g-w,o-w
 }
