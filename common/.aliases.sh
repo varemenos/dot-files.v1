@@ -15,12 +15,20 @@ fi
 alias grep='grep --color=auto'
 alias gedit='subl'
 alias g='git'
-alias h="history"
-alias j="jobs"
-alias cat='bat'
+if ! [ -x "$(command -v bat)" ]; then
+	echo 'Error: bat is not installed (https://github.com/sharkdp/bat#installation). falling back to cat'
+else
+	alias cat='bat'
+fi
 
 # Actions
-alias preview="fzf --preview 'bat --color \"always\" {}'"
+
+if ! [ -x "$(command -v fzf)" ]; then
+	echo 'Error: fzf is not installed (https://github.com/junegunn/fzf#installation).'
+else
+	alias preview="fzf --preview 'bat --color \"always\" {}'"
+fi
+
 alias build-source='./configure && make && sudo make install'
 alias untar='tar -zxvf'
 alias untarxz='tar -xJf'
