@@ -17,6 +17,7 @@ Additional/optional packages: [`varemenos/node`](https://github.com/varemenos/do
 
 ## Current non-automated steps
 
+GNU Stow needs to be installed before the installation process begins, it's used to sync the dotfile packages.
 [bat](https://github.com/sharkdp/bat) and [fzf](https://github.com/junegunn/fzf) have to be installed manually.
 
 ## License
