@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 pkg.link() {
-	fs.link_files common
+	 stow common -t ~
 
 	case $(os.platform) in
 		osx)
-			fs.link_files platform/osx
+			stow platform/osx -t ~
 			;;
 		linux)
-			fs.link_files platform/linux
+			stow platform/linux -t ~
 			;;
 	esac
 }
