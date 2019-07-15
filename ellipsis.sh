@@ -12,7 +12,7 @@ pkg.link() {
 			stow linux -t ~
 			;;
 	esac
-	popd
+	cd..
 }
 
 pkg.install() {
