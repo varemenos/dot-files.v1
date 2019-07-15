@@ -9,6 +9,7 @@ my dotfiles, enjoy
 ## Installation
 
 ```
+// !!you need to install stow, check your distro's package manager for instructions
 curl -sL ellipsis.sh | PACKAGES='varemenos/files' sh && exec $SHELL
 ```
 
