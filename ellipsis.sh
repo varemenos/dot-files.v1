@@ -3,13 +3,13 @@
 pkg.link() {
 	stow common -t ~
 	
-	cd platform
+	cd ./platform
 	case $(os.platform) in
 		osx)
-			stow platform/osx -t ~
+			stow osx -t ~
 			;;
 		linux)
-			stow platform/linux -t ~
+			stow linux -t ~
 			;;
 	esac
 	popd
