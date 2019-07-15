@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 pkg.link() {
+	fs.link_files common
 	fs.link_rfiles common
 
 	case $(os.platform) in
