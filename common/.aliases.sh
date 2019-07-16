@@ -16,6 +16,8 @@ alias grep='grep --color=auto'
 alias gedit='subl'
 alias g='git'
 alias weather="curl wttr.in/Stockholm"
+alias cat=bat
+alias preview="fzf --preview 'bat --color \"always\" {}'"
 
 # Actions
 
