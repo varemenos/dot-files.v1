@@ -15,6 +15,7 @@ fi
 alias grep='grep --color=auto'
 alias gedit='subl'
 alias g='git'
+alias weather="curl wttr.in/Stockholm"
 if ! [ -x "$(command -v bat)" ]; then
 	echo 'Error: bat is not installed (https://github.com/sharkdp/bat#installation). falling back to cat'
 else
