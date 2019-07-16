@@ -15,6 +15,8 @@ zplug "plugins/npm", from:oh-my-zsh, defer:3
 zplug "plugins/yarn", from:oh-my-zsh, defer:3
 zplug "plugins/rbenv", from:oh-my-zsh, defer:3
 zplug "plugins/fzf", from:oh-my-zsh, defer:3
+zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat"
+zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:"fzf"
 zplug "plugins/z", from:oh-my-zsh, defer:3
 zplug "themes/lukerandall", from:oh-my-zsh
 
@@ -23,8 +25,6 @@ zplug "zsh-users/zsh-syntax-highlighting" # Syntax highlighting bundle.
 zplug "zsh-users/zsh-history-substring-search" # Fish shell's history search functionality bundle.
 zplug "zsh-users/zsh-completions" # Additional completion definitions for Zsh.
 zplug "zsh-users/zsh-autosuggestions" # Fish-like autosuggestions for zsh bundle.
-
-zplug "sharkdp/bat", as:command, from:gh-r, rename-to:bat
 
 # Load if "if" tag returns true
 # zplug "lib/clipboard", if:"[[ $OSTYPE == *darwin* ]]"

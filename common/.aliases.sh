@@ -19,12 +19,6 @@ alias weather="curl wttr.in/Stockholm"
 
 # Actions
 
-if ! [ -x "$(command -v fzf)" ]; then
-	echo 'Error: fzf is not installed (https://github.com/junegunn/fzf#installation).'
-else
-	alias preview="fzf --preview 'bat --color \"always\" {}'"
-fi
-
 alias build-source='./configure && make && sudo make install'
 alias untar='tar -zxvf'
 alias untarxz='tar -xJf'
