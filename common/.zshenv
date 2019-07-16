@@ -57,3 +57,26 @@ export GOPATH=~/.go
 
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+
+# Set Android Home Path for React Native
+if [[ $CURRENT_OS == 'OS X' ]]; then
+	export ANDROID_HOME=$HOME/Library/Android/sdk
+else
+	export ANDROID_HOME=$HOME/Android/sdk
+fi
+
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# iterm2 Badges (use after sourcing iterm2 integration)
+if [[ $CURRENT_OS == 'OS X' ]]; then
+	iterm2_print_user_vars() {
+		iterm2_set_user_var nodeVersion "$(node -v)"
+		iterm2_set_user_var rubyVersion "$(ruby -v | cut -d ' ' -f1,2 | cut -d 'p' -f1)"
+		iterm2_set_user_var AWS_REGION "$AWS_REGION"
+		iterm2_set_user_var AWS_DEFAULT_REGION "$AWS_DEFAULT_REGION"
+		iterm2_set_user_var gitUser $(git config --get user.email | cut -d "@" -f1)
+	}
+fi
