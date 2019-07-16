@@ -26,10 +26,10 @@ export LANGUAGE=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export CURRENT_OS=$CURRENT_OS
-export CURRENT_DISTRO=$CURRENT_DISTRO
 
 # Python version missmatch in Arch
 if [[ $CURRENT_OS == 'Linux' ]]; then
+  export CURRENT_DISTRO=$CURRENT_DISTRO
 	if [[ $CURRENT_DISTRO == 'ARCH' ]]; then
 		export PYTHON=python2
 	fi
