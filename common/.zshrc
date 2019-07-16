@@ -5,6 +5,8 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_CORRECTION="true"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
 
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
 # load oh-my-zsh library
 zplug "robbyrussell/oh-my-zsh", use:"oh-my-zsh.sh"
 
