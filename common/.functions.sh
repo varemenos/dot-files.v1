@@ -97,3 +97,8 @@ function addhost() {
         echo "  addhost ip domain"
     fi
 }
+
+function setworkgit() {
+	git config user.name "Adonis Kakoulidis"
+	git config user.email "adonis.kakoulidis@nentgroup.com"
+}
