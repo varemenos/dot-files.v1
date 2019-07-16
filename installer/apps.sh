@@ -3,7 +3,6 @@
 # TODO: create common and platform specific collections
 platform_common=(
 	zsh
-	bat
 	fzf
 	wget
 	curl

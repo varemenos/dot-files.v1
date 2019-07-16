@@ -24,6 +24,8 @@ zplug "zsh-users/zsh-history-substring-search" # Fish shell's history search fun
 zplug "zsh-users/zsh-completions" # Additional completion definitions for Zsh.
 zplug "zsh-users/zsh-autosuggestions" # Fish-like autosuggestions for zsh bundle.
 
+zplug "sharkdp/bat", as:command, from:gh-r, rename-to:bat
+
 # Load if "if" tag returns true
 # zplug "lib/clipboard", if:"[[ $OSTYPE == *darwin* ]]"
 
