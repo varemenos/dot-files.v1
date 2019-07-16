@@ -6,7 +6,7 @@ if ls --color > /dev/null 2>&1; then
 	# GNU `ls`
 	colorflag="--color"
 else
-	# OS X `ls`
+	# MAC OS `ls`
 	colorflag="-G"
 fi
 
@@ -36,8 +36,8 @@ alias untarxz='tar -xJf'
 alias androidSS='adb shell /system/bin/screencap -p /sdcard/screenshot.png && adb pull /sdcard/screenshot.png ~/desktop/screenshot.png'
 if [[ $CURRENT_OS == 'Linux' ]]; then
 	alias ls='ls -X -h --group-directories-first ${colorflag}'
-	alias pbcopy='xclip -selection clipboard' # OSX compatibility
-	alias pbpaste='xclip -selection clipboard -o' # OSX compatibility
+	alias pbcopy='xclip -selection clipboard' # MAC OS compatibility
+	alias pbpaste='xclip -selection clipboard -o' # MAC OS compatibility
 else
 	alias ls='gls -X -h --group-directories-first ${colorflag}'
 	alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'

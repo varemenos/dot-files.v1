@@ -1,11 +1,11 @@
 ### OS Detection
 UNAME=`uname`
 if [[ $UNAME == 'Darwin' ]]; then
-	CURRENT_OS='OS X'
+	CURRENT_OS='MAC OS'
 elif [[ $UNAME == 'Linux' ]]; then
 	CURRENT_OS='Linux'
 	if [ -f "/etc/arch-release" ]; then
-		CURRENT_DISTRO='ARCH'
+		CURRENT_DISTRO='ARCHLINUX'
 	else
 		CURRENT_DISTRO='UBUNTU'
 	fi
@@ -29,8 +29,8 @@ export CURRENT_OS=$CURRENT_OS
 
 # Python version missmatch in Arch
 if [[ $CURRENT_OS == 'Linux' ]]; then
-  export CURRENT_DISTRO=$CURRENT_DISTRO
-	if [[ $CURRENT_DISTRO == 'ARCH' ]]; then
+	export CURRENT_DISTRO=$CURRENT_DISTRO
+	if [[ $CURRENT_DISTRO == 'ARCHLINUX' ]]; then
 		export PYTHON=python2
 	fi
 fi
@@ -67,7 +67,7 @@ export GOPATH=$HOME/.go
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 # Set Android Home Path for React Native
-if [[ $CURRENT_OS == 'OS X' ]]; then
+if [[ $CURRENT_OS == 'MAC OS' ]]; then
 	export ANDROID_HOME=$HOME/Library/Android/sdk
 else
 	export ANDROID_HOME=$HOME/Android/sdk
@@ -79,7 +79,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # iterm2 Badges (use after sourcing iterm2 integration)
-if [[ $CURRENT_OS == 'OS X' ]]; then
+if [[ $CURRENT_OS == 'MAC OS' ]]; then
 	iterm2_print_user_vars() {
 		iterm2_set_user_var nodeVersion "$(node -v)"
 		iterm2_set_user_var rubyVersion "$(ruby -v | cut -d ' ' -f1,2 | cut -d 'p' -f1)"

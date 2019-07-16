@@ -29,7 +29,7 @@ zplug "zsh-users/zsh-autosuggestions" # Fish-like autosuggestions for zsh bundle
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
-    zplug install
+	zplug install
 fi
 
 # Then, source plugins and add commands to $PATH

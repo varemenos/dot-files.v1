@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ $CURRENT_OS == 'Linux' ]]; then
+if [[ $CURRENT_DISTRO == 'ARCHLINUX' ]]; then
 	if test ! $(which packer); then
 		echo "Installing packer"
 

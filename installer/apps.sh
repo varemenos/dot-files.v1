@@ -1,78 +1,53 @@
 #!/usr/bin/env bash
 
 # TODO: create common and platform specific collections
+platform_common=(
+	zsh
+	bat
+	fzf
+	wget
+	curl
+	rsync
+	tree
+	stow
+)
 
 if [[ $CURRENT_OS == 'Linux' ]]; then
-	apps=(
-		# cli
-		zsh
-		bat
-		fzf
-		wget
-		curl
-		rsync
-		thefuck
-		openssh
-		command-not-found
-		ctags
-		crda
-		dialog
-		dosfstools
-		f2fs-tools
-		ntfs-3g
-		mtools
-		dmraid
-		efibootmgr
-		gptfdisk
-		haveged
-		hwdetect
-		hwinfo
-		libui-sh
-		ntp
-		os-prober
-		parted
-		prebootloader
-		gummiboot
-		curlftpfs
-		hddtemp
-		hdparm
-		htop
-		lm_sensors
-		mongodb
-		nginx
-		nodejs
-		ntfs-3g
+	linux_common=(
+		# cli/libs
 		openssh
 		openvpn
+		command-not-found
+		ctags
+		parted
 		ruby-build
-		screenfetch
-		sni-qt
-		tmux
-		tree
-		sshfs
-		wine
-		alsa-utils
 		sudo
 		unzip
+		#apps
+		# TODO!
+	)
+	ubuntu_specific=(
+		# cli/libs
+		# TODO!
+		# apps
+		# TODO!
+	)
+	arch_specific=(
+		# cli/libs
+		lm_sensors
 		unrar
 		# apps
 		guake
-		sublime-text-nightly
 		mysql-workbench
 		google-chrome
 		firefox
-		spotify
 		dropbox
-		deja-dup
 		gitg
-		atom-editor
-		electron
 		filebot
 		filezilla
 		gimp
 		inkscape
 		gparted
-		opera
 		qbittorrent
 		robomongo-git
 		simplescreenrecorder
@@ -82,65 +57,68 @@ if [[ $CURRENT_OS == 'Linux' ]]; then
 		virtualbox
 		vlc
 		# gnome
-		gnome
-		gdm
-		#gnome configuration
-		gnome-tweak-tool
-		dconf
-		dconf-editor
-		gconf
-		gconf-editor
-		gksu
-		file-roller
-		# icons
-		numix-circle-icon-theme-git
-		# ruby-build for rbenv installations
-		ruby-build
-		# network tools
-		dnsutils
-		modemmanager
-		inetutils
-		wireless_tools
-		traceroute
-		netctl
-		net-tools
-		networkmanager-openvpn
-		networkmanager-pptp
-		usb_modeswitch
-		whois
-		wpa_actiond
-		network-manager-applet
-		# android
-		android-sdk-platform-tools
-		android-udev
-		# other
-		gst-libav
-		gst-plugins-bad
-		gst-plugins-base
-		gst-plugins-good
-		gst-plugins-ugly
-		gstreamer0.10-plugins
-		gstreamer-vaapi
-		gvfs-mtp
-		libgnomeui
-		libwnck3
+		# TODO!
+		# gdm
+		# #gnome configuration
+		# gnome-tweak-tool
+		# dconf
+		# dconf-editor
+		# gconf
+		# gconf-editor
+		# gksu
+		# file-roller
+		# # icons
+		# numix-circle-icon-theme-git
+		# # network tools
+		# dnsutils
+		# modemmanager
+		# inetutils
+		# wireless_tools
+		# traceroute
+		# netctl
+		# net-tools
+		# networkmanager-openvpn
+		# networkmanager-pptp
+		# usb_modeswitch
+		# whois
+		# wpa_actiond
+		# network-manager-applet
+		# # android
+		# android-sdk-platform-tools
+		# android-udev
+		# # other
+		# gst-libav
+		# gst-plugins-bad
+		# gst-plugins-base
+		# gst-plugins-good
+		# gst-plugins-ugly
+		# gstreamer0.10-plugins
+		# gstreamer-vaapi
+		# gvfs-mtp
+		# libgnomeui
+		# libwnck3
 	)
 
-	packer -S ${apps[@]}
+	if [[ $CURRENT_DISTRO == 'ARCHLINUX' ]]; then
+		packer -S ${platform_common[@]}
+		packer -S ${linux_common[@]}
+		packer -S ${linux_common[@arch_specific]}
+	else
+		sudo apt-get install -y ${platform_common[@]}
+		sudo apt-get install -y ${linux_common[@]}
+		sudo apt-get install -y ${ubuntu_specific[@]}
 else
-	apps=(
+	macos_specific=(
 		ack
 		adns
 		aircrack-ng
 		autoconf
 		autoenv
-		bat
 		binutils
 		binwalk
 		cifer
 		consul
 		coreutils
-		curl
 		dex2jar
 		dns2tcp
 		docker
@@ -241,20 +219,17 @@ else
 		tcpreplay
 		tcptrace
 		tmux
-		tree
 		unrar
 		vbindiff
 		vim
-		wget
 		woff2
 		x264
 		xvid
 		xz
 		zopfli
-		zsh
 	)
 
-	caskApps=(
+	cask_specific=(
 		1password
 		atom
 		backblaze
@@ -290,6 +265,7 @@ else
 		xquartz
 	)
 
-	brew install ${apps[@]}
-	brew cask install ${caskApps[@]}
+	brew install ${platform_common[@]}
+	brew install ${macos_specific[@]}
+	brew cask install ${cask_specific[@]}
 fi
