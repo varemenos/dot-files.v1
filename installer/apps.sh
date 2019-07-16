@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
+# TODO: create common and platform specific collections
+
 if [[ $CURRENT_OS == 'Linux' ]]; then
 	apps=(
 		# cli
-		bat
 		zsh
+		bat
+		fzf
 		wget
 		curl
 		rsync
