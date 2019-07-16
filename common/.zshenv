@@ -4,6 +4,11 @@ if [[ $UNAME == 'Darwin' ]]; then
 	CURRENT_OS='OS X'
 elif [[ $UNAME == 'Linux' ]]; then
 	CURRENT_OS='Linux'
+	if [ -f "/etc/arch-release" ]; then
+		CURRENT_DISTRO='ARCH'
+	else
+		CURRENT_DISTRO='UBUNTU'
+	fi
 else
 	CURRENT_OS='Unknown'
 fi
@@ -21,10 +26,13 @@ export LANGUAGE=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export CURRENT_OS=$CURRENT_OS
+export CURRENT_DISTRO=$CURRENT_DISTRO
 
 # Python version missmatch in Arch
 if [[ $CURRENT_OS == 'Linux' ]]; then
-	export PYTHON=python2
+	if [[ $CURRENT_DISTRO == 'ARCH' ]]; then
+		export PYTHON=python2
+	fi
 fi
 
 # Load NVM
@@ -42,7 +50,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 [[ -s $HOME/.rbenv/bin/rbenv ]] && eval "$(rbenv init -)"
 
 # load ellipsis.sh
-export PATH=~/.ellipsis/bin:$PATH
+export PATH=$HOME/.ellipsis/bin:$PATH
 
 # Set CHROME_BIN for karma
 if [[ $CURRENT_OS == 'Linux' ]]; then
@@ -53,7 +61,7 @@ fi
 PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # Set GOPATH
-export GOPATH=~/.go
+export GOPATH=$HOME/.go
 
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
