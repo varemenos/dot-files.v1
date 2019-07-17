@@ -18,7 +18,7 @@ zplug "plugins/yarn", from:oh-my-zsh, defer:3
 zplug "plugins/rbenv", from:oh-my-zsh, defer:3
 zplug "plugins/fzf", from:oh-my-zsh, defer:3
 if [[ $CURRENT_OS == 'MAC OS' ]]; then
-	zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", if:"[[ $OSTYPE == *darwin* ]]"
+	zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat"
 else
 	zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", use:"*x86_64*linux*"
 fi
