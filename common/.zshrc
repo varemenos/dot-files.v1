@@ -17,8 +17,11 @@ zplug "plugins/npm", from:oh-my-zsh, defer:3
 zplug "plugins/yarn", from:oh-my-zsh, defer:3
 zplug "plugins/rbenv", from:oh-my-zsh, defer:3
 zplug "plugins/fzf", from:oh-my-zsh, defer:3
-zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", if:"[[ $OSTYPE == *darwin* ]]"
-zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", use:"*linux*", if:"[[ $OSTYPE == *x86_64*linux* ]]"
+if [[ $CURRENT_OS == 'MAC OS' ]]; then
+	zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", if:"[[ $OSTYPE == *darwin* ]]"
+else
+	zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", use:"*x86_64*linux*"
+fi
 zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:"fzf"
 zplug "plugins/z", from:oh-my-zsh, defer:3
 zplug "themes/lukerandall", from:oh-my-zsh
