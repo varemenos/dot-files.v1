@@ -1,9 +1,0 @@
-# install brew, zsh etc
-chsh -s $(which zsh)
-# git clone my in ~/dotfiles, check this out again
-# dotted files are ignored, remove dot to use
-# files that shouldn't have a dot in their filename should use the -U flag
-brew tap thoughtbot/formulae
-brew install rcm
-rcup
-# need to install zplug too
