@@ -30,10 +30,7 @@ zplug "chrissicool/zsh-256color" # ZSH plugin enhances the terminal environment 
 zplug "zsh-users/zsh-syntax-highlighting" # Syntax highlighting bundle.
 zplug "zsh-users/zsh-history-substring-search" # Fish shell's history search functionality bundle.
 zplug "zsh-users/zsh-completions" # Additional completion definitions for Zsh.
-zplug "zsh-users/zsh-autosuggestions" # Fish-like autosuggestions for zsh bundle.
-
-# Load if "if" tag returns true
-# zplug "lib/clipboard", if:"[[ $OSTYPE == *darwin* ]]"
+zplug "zsh-users/zsh-autosuggestions" # Fish-like autosuggestions for Zsh.
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
