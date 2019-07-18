@@ -1,41 +1,38 @@
 # Sudofix (fixes aliases not being able to run when using sudo)
 alias sudo='sudo '
 
-# Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then
-	# GNU `ls`
-	colorflag="--color"
-else
-	# MAC OS `ls`
-	colorflag="-G"
-fi
-
 # Applications
-
 alias grep='grep --color=auto'
-alias gedit='subl'
 alias g='git'
 alias weather="curl wttr.in/Stockholm"
+
 if [ -x "$(command -v bat)" ]; then
 	alias cat='bat'
+else
+	echo 'Warning! bat is not installed, please install it'
 fi
 
 if [ -x "$(command -v fzf)" ]; then
 	alias preview="fzf --preview 'bat --color \"always\" {}'"
+else
+	echo 'Warning! fzf is not installed, please install it'
 fi
 
-# Actions
-
-alias build-source='./configure && make && sudo make install'
-alias untar='tar -zxvf'
-alias untarxz='tar -xJf'
-alias androidSS='adb shell /system/bin/screencap -p /sdcard/screenshot.png && adb pull /sdcard/screenshot.png ~/desktop/screenshot.png'
-if [[ $CURRENT_OS == 'Linux' ]]; then
+if [ -x "$(command -v exa)" ]; then
+	alias ls='exa -hg --icons --group-directories-first --color=auto'
+else
+	echo 'Warning! exa is not installed, please install it'
+	# Detect which `ls` flavor is in use
+	if ls --color > /dev/null 2>&1; then; colorflag="--color"; else; colorflag="-G" fi
 	alias ls='ls -X -h --group-directories-first ${colorflag}'
+fi
+
+if [[ $CURRENT_OS == 'Linux' ]]; then
 	alias pbcopy='xclip -selection clipboard' # MAC OS compatibility
 	alias pbpaste='xclip -selection clipboard -o' # MAC OS compatibility
-else
-	alias ls='gls -X -h --group-directories-first ${colorflag}'
+fi
+
+if [[ $CURRENT_OS == 'MAC OS' ]]; then
 	alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 fi
 
