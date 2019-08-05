@@ -28,6 +28,16 @@ if [[ $CURRENT_OS == 'MAC OS' ]]; then; USE_OS="darwin"; else; USE_OS="linux"; f
 zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", use:"*$USE_OS*", defer:3
 zplug "ogham/exa", as:command, from:gh-r, rename-to:"bat", use:"*$USE_OS*", defer:3
 zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:"fzf", defer:3
+zplug "wfxr/emoji-cli", as:command, use:'emojify|fuzzy-emoji', defer:3
+if [[ $CURRENT_OS == 'MAC_OS' ]]; then
+	zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", if:"[[ $OSTYPE == *darwin* ]]", defer:3
+else
+	zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", use:"*x86_64*linux*", defer:3
+fi
+
+if [[ $TERM_PROGRAM == 'iTerm.app' ]]; then
+	zplug "tysonwolker/iterm-tab-colors", defer:3 # change the color of iterm based on the PWD
+fi
 
 zplug "chrissicool/zsh-256color" # ZSH plugin enhances the terminal environment with 256 colors.
 zplug "zsh-users/zsh-history-substring-search" # Fish shell's history search functionality bundle.
