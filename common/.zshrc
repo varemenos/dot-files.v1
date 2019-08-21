@@ -20,8 +20,8 @@ zplug "plugins/yarn", from:oh-my-zsh, defer:3
 zplug "plugins/rbenv", from:oh-my-zsh, defer:3
 zplug "plugins/fzf", from:oh-my-zsh, defer:3
 zplug "plugins/z", from:oh-my-zsh, defer:3
-zplug "themes/lukerandall", from:oh-my-zsh
-
+# zplug "themes/lukerandall", from:oh-my-zsh
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 if [[ $CURRENT_OS == 'MAC OS' ]]; then; USE_OS="darwin"; else; USE_OS="linux"; fi
 
