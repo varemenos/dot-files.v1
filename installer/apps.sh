@@ -229,27 +229,20 @@ else
 
 	cask_specific=(
 		1password
-		atom
-		backblaze
-		cloudapp
 		dash
 		docker
 		firefox
 		font-fira-code
-		franz
-		gimp
+		font-firacode-nerd-font
+		wavebox
 		google-chrome
 		google-drive-file-stream
 		inkscape
 		iterm2
-		java
-		java8
 		kap
 		mongodb-compass
-		nvidia-geforce-now
 		onyx
 		osxfuse
-		scroll-reverser
 		skype
 		sourcetree
 		spectacle
@@ -260,7 +253,6 @@ else
 		virtualbox
 		visual-studio-code
 		vlc
-		xquartz
 	)
 
 	brew install ${platform_common[@]}
