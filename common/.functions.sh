@@ -3,6 +3,11 @@ function mkd() {
 	mkdir -p "$@" && cd "$@"
 }
 
+# clones a directory and cds into it
+function gcld() {
+  git clone $1 && cd $(basename "$1" .git)
+}
+
 # lists zombie processes
 function zombie() {
 	ps aux | awk '{if ($8=="Z") { print $2 }}'
