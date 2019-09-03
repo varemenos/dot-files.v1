@@ -18,6 +18,11 @@ chpwd() {
 	ls
 }
 
+# `whodis 3000` prints listeners of port 3000
+function whodis() {
+	lsof -n -i:$@ | grep LISTEN
+}
+
 if [[ $CURRENT_OS == 'Linux' ]]; then
 	pull-gnome-extensions() {
 		dconf dump /org/gnome/shell/extensions/ > ./.gnome-extensions.conf
