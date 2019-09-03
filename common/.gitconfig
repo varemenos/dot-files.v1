@@ -1,5 +1,5 @@
 [user]
-	name = Adonis K.
+	name = Adonis Kakoulidis
 	email = aklp08@gmail.com
 
 [github]
@@ -69,5 +69,5 @@
 [diff]
 	colorMoved = zebra
 
-[includeIf "gitdir:~/Projects/Viaplay/"]
-	path = ~/Projects/Viaplay/.gitconfig
+[includeIf "gitdir:~/Projects/Vimla/"]
+	path = ~/Projects/Vimla/.gitconfig
