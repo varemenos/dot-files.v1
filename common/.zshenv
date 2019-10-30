@@ -41,6 +41,9 @@ fi
 # Tell NVM to symlink the currently selected node version
 export NVM_SYMLINK_CURRENT=true
 
+# Automatic 'nvm use'
+export NVM_AUTO_USE=true
+
 # Homebrew fixes
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 

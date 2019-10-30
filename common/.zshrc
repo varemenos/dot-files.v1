@@ -43,6 +43,8 @@ zplug "chrissicool/zsh-256color" # ZSH plugin enhances the terminal environment 
 zplug "zsh-users/zsh-history-substring-search" # Fish shell's history search functionality bundle.
 zplug "zsh-users/zsh-completions" # Additional completion definitions for Zsh.
 zplug "zsh-users/zsh-autosuggestions" # Fish-like autosuggestions for Zsh.
+zplug "lukechilds/zsh-nvm" # nvm bindings to zsh
+zplug "lukechilds/zsh-better-npm-completion", defer:3 # npm completions
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
@@ -60,6 +62,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:3 # Syntax highlighting bundle.
 # https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
-
-DEVOPS_HOME="/Users/adonisk/Projects/Vimla/devops"
-test -e "${DEVOPS_HOME}/project-control.sh" && pushd "${DEVOPS_HOME}" && source "${DEVOPS_HOME}/project-control.sh" && popd
