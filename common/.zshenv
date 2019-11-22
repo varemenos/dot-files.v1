@@ -100,4 +100,5 @@ load-project-control() {
     fi
 }
 
+autoload -U add-zsh-hook
 add-zsh-hook chpwd load-project-control
