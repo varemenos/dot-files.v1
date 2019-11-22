@@ -44,7 +44,8 @@ zplug "zsh-users/zsh-history-substring-search" # Fish shell's history search fun
 zplug "zsh-users/zsh-completions" # Additional completion definitions for Zsh.
 zplug "zsh-users/zsh-autosuggestions" # Fish-like autosuggestions for Zsh.
 zplug "lukechilds/zsh-nvm" # nvm bindings to zsh
-zplug "lukechilds/zsh-better-npm-completion", defer:3 # npm completions
+zplug "lukechilds/zsh-better-npm-completion", defer:2 # npm completions
+zplug "paulirish/git-open", as:plugin, defer:3 # open git repository links
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
