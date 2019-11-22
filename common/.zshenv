@@ -91,3 +91,13 @@ if [[ $CURRENT_OS == 'MAC OS' ]]; then
 		iterm2_set_user_var gitUser $(git config --get user.email | cut -d "@" -f1)
 	}
 fi
+
+# load project-control if available
+
+load-project-control() {
+    if [[ -f "project-control.sh" ]]; then
+        source project-control.sh
+    fi
+}
+
+add-zsh-hook chpwd load-project-control
