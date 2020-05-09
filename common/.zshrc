@@ -35,17 +35,14 @@ else
 	zplug "sharkdp/bat", as:command, from:gh-r, rename-to:"bat", use:"*x86_64*linux*", defer:3
 fi
 
-if [[ $TERM_PROGRAM == 'iTerm.app' ]]; then
-	#zplug "tysonwolker/iterm-tab-colors", defer:3 # change the color of iterm based on the PWD
-fi
-
 zplug "chrissicool/zsh-256color" # ZSH plugin enhances the terminal environment with 256 colors.
 zplug "zsh-users/zsh-history-substring-search" # Fish shell's history search functionality bundle.
 zplug "zsh-users/zsh-completions" # Additional completion definitions for Zsh.
 zplug "zsh-users/zsh-autosuggestions" # Fish-like autosuggestions for Zsh.
 zplug "lukechilds/zsh-nvm" # nvm bindings to zsh
 zplug "lukechilds/zsh-better-npm-completion", defer:2 # npm completions
-zplug "paulirish/git-open", as:plugin, defer:3 # open git repository links
+zplug "paulirish/git-open", as:plugin, defer:3
+zplug "paulirish/git-recent", as:plugin, defer:3
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
@@ -56,8 +53,8 @@ fi
 zplug load
 
 # Load aliases and functions files
-source ~/.aliases.sh
-source ~/.functions.sh
+source ./.aliases.sh
+source ./.functions.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

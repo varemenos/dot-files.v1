@@ -66,6 +66,9 @@ PATH=$PATH:/usr/local/opt/go/libexec/bin
 # Set GOPATH
 export GOPATH=$HOME/.go
 
+# Load fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
+
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
@@ -92,14 +95,4 @@ if [[ $CURRENT_OS == 'MAC OS' ]]; then
 	}
 fi
 
-# load project-control if available
-
-load-project-control() {
-    if [[ -f "project-control.sh" ]]; then
-        source project-control.sh
-    fi
-}
-
-autoload -U add-zsh-hook
-add-zsh-hook chpwd load-project-control
-load-project-control
+source ./.work.zshenv.sh
