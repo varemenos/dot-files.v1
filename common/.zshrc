@@ -53,8 +53,8 @@ fi
 zplug load
 
 # Load aliases and functions files
-source ./.aliases.sh
-source ./.functions.sh
+source ~/.aliases.sh
+source ~/.functions.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
