@@ -22,7 +22,7 @@
 [push]
 	# 'git push' will push the current branch to its tracking branch
 	# the default is to push all branches
-	default = tracking
+	default = current
 
 [alias]
 	a = add
@@ -62,12 +62,50 @@
 	t = tag
 	w = whatchanged
 	ws = status -s
+  cherrypick = cherry-pick
+	cherry = cherry-pick
+	cp = cherry-pick
+  cpa = cherry-pick --abort
+  cpc = cherry-pick --continue
+  cps = cherry-pick --skip
+
+	# show commit log of unique commits of this branch (not on master)
+	diffcommitsfrommaster = log --no-merges master..
+	# show unified diff of unique commits of this branch
+	difffrommaster = diff master...
+	# ^^^^ Holy crap two dots vs three dots, so important. https://stackoverflow.com/a/48681527
 
 [help]
 	autocorrect = 1
 
-[diff]
-	colorMoved = zebra
+[fetch]
+	prune = true
 
 [includeIf "gitdir:~/Projects/Vimla/"]
 	path = ~/Projects/Vimla/.gitconfig
+
+[color "diff"]
+	meta = yellow bold
+	commit = green bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+    newMoved = cyan
+    oldMoved = blue
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = "red bold 52"
+	newNormal = "green bold"
+	newHighlight = "green bold 22"
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = cyan

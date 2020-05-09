@@ -8,6 +8,8 @@
 	<integer>0</integer>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -335,7 +337,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>666 634 347 181 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
-	<string>652 1712 616 174 0 1050 1920 1057 </string>
+	<string>532 639 616 174 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-1270 1518 620 392 -1920 930 1920 1177 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
@@ -985,11 +987,11 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
@@ -1683,6 +1685,7 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.2</string>
+		<string>3.3.9</string>
 		<string>3.3.7</string>
 		<string>3.3.3</string>
 		<string>3.3.6</string>
@@ -1705,7 +1708,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{561, 660}</string>
+		<string>{576, 931}</string>
 	</dict>
 	<key>NoSyncInstallUtilitiesPackage</key>
 	<true/>
@@ -1714,7 +1717,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>FC1FD895-FE36-42C1-BE95-E09C8AAD3134</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>24</integer>
+	<integer>25</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2479,19 +2482,6 @@
 			</dict>
 		</array>
 	</dict>
-	<key>NoSyncSearchHistory2</key>
-	<array>
-		<string>got in</string>
-		<string>logstash</string>
-		<string>logtash</string>
-		<string>c1fuo18i7m8b</string>
-		<string>4c0df5a073d3</string>
-		<string>json</string>
-		<string>input</string>
-		<string>alias</string>
-		<string>warning</string>
-		<string>rollover alias</string>
-	</array>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>588505895.01416302</real>
 	<key>OpenArrangementAtStartup</key>
@@ -2550,7 +2540,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-12T23:20:08Z</date>
+	<date>2020-05-09T09:30:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2599,7 +2589,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.7</string>
+	<string>3.3.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
