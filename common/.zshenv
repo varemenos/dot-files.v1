@@ -95,4 +95,4 @@ if [[ $CURRENT_OS == 'MAC OS' ]]; then
 	}
 fi
 
-source ./.work.zshenv.sh
+source ~/.work.zshenv.sh
