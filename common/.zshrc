@@ -42,7 +42,6 @@ zplug "zsh-users/zsh-autosuggestions" # Fish-like autosuggestions for Zsh.
 zplug "lukechilds/zsh-nvm" # nvm bindings to zsh
 zplug "lukechilds/zsh-better-npm-completion", defer:2 # npm completions
 zplug "paulirish/git-open", as:plugin, defer:3
-zplug "paulirish/git-recent", as:plugin, defer:3
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
