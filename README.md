@@ -13,6 +13,8 @@ You need to install these with your package manager before proceeding
 * zsh
 * stow
 
+(There are currently a couple of cross platform issues as well regarding exa and bat, you might need to install those manually).
+
 ## Installation
 
 ```bash
