@@ -59,3 +59,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:3 # Syntax highlighting bundle.
 # https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
+
+source /usr/local/share/chxcode/chxcode
+source /usr/local/share/chxcode/auto
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
