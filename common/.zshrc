@@ -9,7 +9,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # load oh-my-zsh library
-zplug "robbyrussell/oh-my-zsh", use:"oh-my-zsh.sh"
+#zplug "robbyrussell/oh-my-zsh", use:"oh-my-zsh.sh"
 
 # load oh-my-zsh plugins and themes
 zplug "plugins/gitfast", from:oh-my-zsh, defer:3
@@ -64,3 +64,5 @@ source /usr/local/share/chxcode/chxcode
 source /usr/local/share/chxcode/auto
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(starship init zsh)"
